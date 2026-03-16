@@ -4,6 +4,9 @@ public class PlayAudio : MonoBehaviour
 {
     public AudioSource audioSource;
 
+    // Static reference to the currently playing AudioSource
+    private static AudioSource currentlyPlaying;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -11,10 +14,18 @@ public class PlayAudio : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("trigger is fired");
-        if (other.tag == "Player" && !audioSource.isPlaying)
+        if (other.CompareTag("Player"))
         {
+            Debug.Log("Trigger fired");
+
+            // Stop the previous audio if it exists and is different
+            if (currentlyPlaying != null && currentlyPlaying != audioSource)
+            {
+                currentlyPlaying.Stop();
+            }
+
             audioSource.Play();
+            currentlyPlaying = audioSource;
             Debug.Log("Audio playing");
         }
     }
