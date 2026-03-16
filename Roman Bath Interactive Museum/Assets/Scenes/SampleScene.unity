@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 98110675}
   - component: {fileID: 98110678}
   - component: {fileID: 98110679}
+  - component: {fileID: 98110680}
   m_Layer: 0
   m_Name: Audio2
   m_TagString: Untagged
@@ -336,6 +337,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &98110680
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98110674}
+  m_Enabled: 1
+  m_DryLevel: -816
+  m_Room: -466
+  m_RoomHF: 0
+  m_DecayTime: 3.1
+  m_DecayHFRatio: 0.5
+  m_ReflectionsLevel: -10000
+  m_ReverbLevel: 0
+  m_ReverbDelay: 0.04
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 27
 --- !u!1 &164453822 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9012210441751437106, guid: 8d32cb6ed3b42a544bbd9ddc2c871e8b, type: 3}
